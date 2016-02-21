@@ -23,7 +23,7 @@ public class Calculator
 	 */
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -32,7 +32,7 @@ public class Calculator
 	 */
 	public void add (int value) 
 	{
-		
+		total += value;
 	}
 	
 	/**
@@ -41,7 +41,7 @@ public class Calculator
 	 */
 	public void subtract (int value) 
 	{
-		
+		total -= value;
 	}
 	
 	/**
@@ -50,7 +50,7 @@ public class Calculator
 	 */
 	public void multiply (int value) 
 	{
-		
+		total *= value;
 	}
 	
 	/**
@@ -59,7 +59,18 @@ public class Calculator
 	 */
 	public void divide (int value) 
 	{
-		
+		// From the requirements:
+		// The divide method should divide the total by the parameter. 
+		// Use integer division. If the parameter is zero, set the total to zero. 
+		// Do not print an error message.
+		if (value != 0)
+		{
+			total /= value;
+		}
+		else
+		{
+			total = 0;
+		}
 	}
 	
 	/**

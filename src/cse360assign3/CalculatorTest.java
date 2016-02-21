@@ -11,7 +11,6 @@ import org.junit.Test;
 
 public class CalculatorTest 
 {
-
 	/**
 	 * Test method for {@link cse360assign3.Calculator#Calculator()}.
 	 */
@@ -28,7 +27,9 @@ public class CalculatorTest
 	@Test
 	public final void testGetTotal() 
 	{
-		fail("Not yet implemented"); // TODO
+		// Should be initialized to 0
+		Calculator calc = new Calculator();
+		assertEquals(0, calc.getTotal());
 	}
 
 	/**
@@ -37,7 +38,13 @@ public class CalculatorTest
 	@Test
 	public final void testAdd() 
 	{
-		fail("Not yet implemented"); // TODO
+		Calculator calc = new Calculator();
+		
+		calc.add(5);
+		assertEquals(5, calc.getTotal());
+		
+		calc.add(-1);
+		assertEquals(4, calc.getTotal());
 	}
 
 	/**
@@ -46,7 +53,13 @@ public class CalculatorTest
 	@Test
 	public final void testSubtract() 
 	{
-		fail("Not yet implemented"); // TODO
+		Calculator calc = new Calculator();
+		
+		calc.subtract(5);
+		assertEquals(-5, calc.getTotal());
+		
+		calc.subtract(-1);
+		assertEquals(-4, calc.getTotal());
 	}
 
 	/**
@@ -55,7 +68,13 @@ public class CalculatorTest
 	@Test
 	public final void testMultiply() 
 	{
-		fail("Not yet implemented"); // TODO
+		Calculator calc = new Calculator();
+		
+		calc.add(2);
+		assertEquals(2, calc.getTotal());
+		
+		calc.multiply(5);
+		assertEquals(10, calc.getTotal());
 	}
 
 	/**
@@ -64,7 +83,16 @@ public class CalculatorTest
 	@Test
 	public final void testDivide() 
 	{
-		fail("Not yet implemented"); // TODO
+		Calculator calc = new Calculator();
+		
+		calc.add(10);
+		assertEquals(10, calc.getTotal());
+		
+		calc.divide(5);
+		assertEquals(2, calc.getTotal());
+		
+		calc.divide(0);
+		assertEquals(0, calc.getTotal());
 	}
 
 	/**
@@ -73,7 +101,9 @@ public class CalculatorTest
 	@Test
 	public final void testGetHistory() 
 	{
-		fail("Not yet implemented"); // TODO
+		// TODO: change this when getHistory() is implemented
+		Calculator calc = new Calculator();
+		assertEquals("", calc.getHistory());
 	}
 
 }
