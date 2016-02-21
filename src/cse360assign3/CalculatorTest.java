@@ -101,9 +101,15 @@ public class CalculatorTest
 	@Test
 	public final void testGetHistory() 
 	{
-		// TODO: change this when getHistory() is implemented
 		Calculator calc = new Calculator();
-		assertEquals("", calc.getHistory());
+
+		assertEquals("0", calc.getHistory());
+		
+		calc.add(18);
+		calc.subtract(2);
+		calc.multiply(2);
+		calc.divide(4);
+		assertEquals("0 + 18 - 2 * 2 / 4", calc.getHistory());
 	}
 
 }
